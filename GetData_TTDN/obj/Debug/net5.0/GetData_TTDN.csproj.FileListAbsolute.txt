@@ -34,3 +34,17 @@ D:\1.TRẦN MINH QUANG\THỰC TẬP DOANH NGHIỆP\GetData_TTDN\GetData_TTDN\bin
 D:\1.TRẦN MINH QUANG\THỰC TẬP DOANH NGHIỆP\GetData_TTDN\GetData_TTDN\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
 D:\1.TRẦN MINH QUANG\THỰC TẬP DOANH NGHIỆP\GetData_TTDN\GetData_TTDN\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\1.TRẦN MINH QUANG\THỰC TẬP DOANH NGHIỆP\GetData_TTDN\GetData_TTDN\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\1.TRẦN MINH QUANG\THỰC TẬP DOANH NGHIỆP\GetData_TTDN\GetData_TTDN\bin\Debug\net5.0\Microsoft.Win32.SystemEvents.dll
+D:\1.TRẦN MINH QUANG\THỰC TẬP DOANH NGHIỆP\GetData_TTDN\GetData_TTDN\bin\Debug\net5.0\System.Diagnostics.EventLog.dll
+D:\1.TRẦN MINH QUANG\THỰC TẬP DOANH NGHIỆP\GetData_TTDN\GetData_TTDN\bin\Debug\net5.0\System.ServiceProcess.ServiceController.dll
+D:\1.TRẦN MINH QUANG\THỰC TẬP DOANH NGHIỆP\GetData_TTDN\GetData_TTDN\bin\Debug\net5.0\Topshelf.dll
+D:\1.TRẦN MINH QUANG\THỰC TẬP DOANH NGHIỆP\GetData_TTDN\GetData_TTDN\bin\Debug\net5.0\TopShelf.ServiceInstaller.dll
+D:\1.TRẦN MINH QUANG\THỰC TẬP DOANH NGHIỆP\GetData_TTDN\GetData_TTDN\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\1.TRẦN MINH QUANG\THỰC TẬP DOANH NGHIỆP\GetData_TTDN\GetData_TTDN\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.EventLog.dll
+D:\1.TRẦN MINH QUANG\THỰC TẬP DOANH NGHIỆP\GetData_TTDN\GetData_TTDN\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.ServiceProcess.ServiceController.dll
+D:\1.TRẦN MINH QUANG\THỰC TẬP DOANH NGHIỆP\GetData_TTDN\GetData_TTDN\bin\Debug\net5.0\GetData_TTDN.dll.config
+D:\1.TRẦN MINH QUANG\THỰC TẬP DOANH NGHIỆP\GetData_TTDN\GetData_TTDN\bin\Debug\net5.0\log4net.dll
+D:\1.TRẦN MINH QUANG\THỰC TẬP DOANH NGHIỆP\GetData_TTDN\GetData_TTDN\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\1.TRẦN MINH QUANG\THỰC TẬP DOANH NGHIỆP\GetData_TTDN\GetData_TTDN\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\1.TRẦN MINH QUANG\THỰC TẬP DOANH NGHIỆP\GetData_TTDN\GetData_TTDN\bin\Debug\net5.0\System.Security.Permissions.dll
+D:\1.TRẦN MINH QUANG\THỰC TẬP DOANH NGHIỆP\GetData_TTDN\GetData_TTDN\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
