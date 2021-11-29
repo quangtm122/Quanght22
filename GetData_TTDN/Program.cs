@@ -1,30 +1,27 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Topshelf;
 
-namespace Test2schedule
+namespace GetData_TTDN
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            var exitCode = HostFactory.Run(x =>
+
+            HostFactory.Run(x =>
             {
-                x.Service<Excute>(s =>
+                x.Service<MyService>(s =>
                 {
-                    s.ConstructUsing(excute => new Excute());
-                    s.WhenStarted(excute => excute.Start());
-                    s.WhenStopped(excute => excute.Stop());
+                    s.ConstructUsing(name => new MyService());
+                    s.WhenStarted(tc => tc.Start());
+                    s.WhenStopped(tc => tc.Stop());
                 });
-
                 x.RunAsLocalSystem();
-
-                x.SetServiceName("ExecuteService");
-                x.SetDisplayName("Execute Service");
-                x.SetDescription("THUC HIEN LAY DU LIEU TU WEB");
+                x.SetDescription("THU THẬP DỮ LIỆU");
+                x.SetDisplayName("MY_SERVICE");
+                x.SetServiceName("MYSERVICE");
             });
-
-            int exitCodeValue = (int)Convert.ChangeType(exitCode, exitCode.GetType());
-            Environment.ExitCode = exitCodeValue;
         }
     }
 }

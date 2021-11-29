@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\1.TRẦN MINH QUANG\\THỰC TẬP DOANH NGHIỆP\\GetData_TTDN\\GetData_TTDN\\GetData_TTDN.csproj": {}
+    "D:\\1.TRẦN MINH QUANG\\4-1 THỰC TẬP DOANH NGHIỆP\\GetData_TTDN\\GetData_TTDN\\GetData_TTDN.csproj": {}
   },
   "projects": {
-    "D:\\1.TRẦN MINH QUANG\\THỰC TẬP DOANH NGHIỆP\\GetData_TTDN\\GetData_TTDN\\GetData_TTDN.csproj": {
+    "D:\\1.TRẦN MINH QUANG\\4-1 THỰC TẬP DOANH NGHIỆP\\GetData_TTDN\\GetData_TTDN\\GetData_TTDN.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\1.TRẦN MINH QUANG\\THỰC TẬP DOANH NGHIỆP\\GetData_TTDN\\GetData_TTDN\\GetData_TTDN.csproj",
+        "projectUniqueName": "D:\\1.TRẦN MINH QUANG\\4-1 THỰC TẬP DOANH NGHIỆP\\GetData_TTDN\\GetData_TTDN\\GetData_TTDN.csproj",
         "projectName": "GetData_TTDN",
-        "projectPath": "D:\\1.TRẦN MINH QUANG\\THỰC TẬP DOANH NGHIỆP\\GetData_TTDN\\GetData_TTDN\\GetData_TTDN.csproj",
+        "projectPath": "D:\\1.TRẦN MINH QUANG\\4-1 THỰC TẬP DOANH NGHIỆP\\GetData_TTDN\\GetData_TTDN\\GetData_TTDN.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\1.TRẦN MINH QUANG\\THỰC TẬP DOANH NGHIỆP\\GetData_TTDN\\GetData_TTDN\\obj\\",
+        "outputPath": "D:\\1.TRẦN MINH QUANG\\4-1 THỰC TẬP DOANH NGHIỆP\\GetData_TTDN\\GetData_TTDN\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,6 +44,24 @@
               "target": "Package",
               "version": "[1.11.38, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -56,9 +74,25 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
+            "Microsoft.Extensions.Configuration.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.Net.Http.Headers": {
               "target": "Package",
               "version": "[2.2.8, )"
+            },
+            "Quartz": {
+              "target": "Package",
+              "version": "[3.3.3, )"
+            },
+            "Quartz.Impl.RavenDB": {
+              "target": "Package",
+              "version": "[1.0.6, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
@@ -75,6 +109,10 @@
             "log4net": {
               "target": "Package",
               "version": "[2.0.13, )"
+            },
+            "quartz.impl.mongodb": {
+              "target": "Package",
+              "version": "[1.3.1, )"
             }
           },
           "imports": [
