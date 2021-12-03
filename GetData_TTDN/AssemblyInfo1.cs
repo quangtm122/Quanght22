@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 
 [assembly: ComVisible(false)]
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
+/*[assembly: log4net.Config.XmlConfigurator(ConfigFile = @"Log4net.config", Watch = true)]*/
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM.
 

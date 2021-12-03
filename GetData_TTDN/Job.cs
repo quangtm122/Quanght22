@@ -1,7 +1,9 @@
 ﻿using HtmlAgilityPack;
+using log4net;
 using Quartz;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -12,14 +14,17 @@ namespace GetData_TTDN
 {
     class Job : IJob
     {
+        private static readonly ILog log = LogManager.GetLogger(typeof(Job));
         public Task Execute(IJobExecutionContext context)
         {
+           
             CrawlData();
             return Task.CompletedTask;
         }
-
+       
         private async Task CrawlData()
         {
+            log4net.Config.XmlConfigurator.ConfigureAndWatch(new FileInfo(AppDomain.CurrentDomain.BaseDirectory + "Log4net.config"));
             using (var httpClient = new HttpClient())
             {
                 string token = "";
@@ -49,11 +54,10 @@ namespace GetData_TTDN
                         string result = message1.Content.ReadAsStringAsync().Result;
                         htmlDocument.LoadHtml(result);
 
-
+                        
                         var GetElment = htmlDocument.DocumentNode.SelectNodes("//div[@class='m-widget1']/div").ToList();
                         var thongtins = new List<ThongTin>();
                         DateTime dateTimeVariable = DateTime.Now;
-                        Console.WriteLine("CREATE SUCCESS AT: " + DateTime.Now);
                         foreach (var RawData in GetElment)
                         {
                             var name = RawData.SelectSingleNode(".//div[contains(@class,'row')]/div[1]/h3/a").InnerText.ToString().Replace("\r", String.Empty).Replace("\n", String.Empty).Replace(" ", String.Empty);
@@ -61,17 +65,6 @@ namespace GetData_TTDN
                             var csln = RawData.SelectSingleNode(".//div[contains(@class,'row')]/div[3]/h3").InnerText.ToString().Replace("\r", String.Empty).Replace("\n", String.Empty).Replace(" ", String.Empty);
                             var tk = RawData.SelectSingleNode(".//div[contains(@class,'row')]/div[4]/h3").InnerText.ToString().Replace("\r", String.Empty).Replace("\n", String.Empty).Replace(" ", String.Empty);
                             var sln = RawData.SelectSingleNode(".//div[contains(@class,'row')]/div[5]/h3").InnerText.ToString().Replace("\r", String.Empty).Replace("\n", String.Empty).Replace(" ", String.Empty);
-
-
-                            /*   var tt = new ThongTin
-                               {
-                                   Name = name,
-                                   HienTai = hientai,
-                                   CongSuatLn = csln,
-                                   ThietKe = tk,
-                                   SanLuongNgay = sln,
-                               };
-                               thongtins.Add(tt);*/
 
                             using (var context = new DataContext())
                             {
@@ -82,16 +75,14 @@ namespace GetData_TTDN
                                     CongSuatLn = Regex.Replace(csln, @"\s", ""),
                                     ThietKe = Regex.Replace(tk, @"\s", ""),
                                     SanLuongNgay = Regex.Replace(sln, @"\s", ""),
-
                                     Time = DateTime.Now,
                                 };
                                 context.Add<ThongTin>(tt);
                                 context.SaveChanges();
-                                /* log.InfoFormat(soLieu.ToString(), Encoding.UTF8);*/
-                            }
-
+                                log.Info("\t GET DATE SUCCESS: " + tt.ToString() + "\n");
+                            } 
                         }
-
+                        Console.WriteLine("CREATE SUCCESS AT: " + DateTime.Now);
                     }
                 }
             }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Threading.Tasks;
 using Topshelf;
 
@@ -6,6 +7,7 @@ namespace GetData_TTDN
 {
     class Program
     {
+
         static async Task Main(string[] args)
         {
 
@@ -18,11 +20,14 @@ namespace GetData_TTDN
                     s.WhenStopped(tc => tc.Stop());
                 });
                 x.RunAsLocalSystem();
-                x.SetDescription("THU THẬP DỮ LIỆU");
-                x.SetDisplayName("MY_SERVICE");
                 x.SetServiceName("MYSERVICE");
+                x.SetDisplayName("MY_SERVICE");
+                x.SetDescription("GET DATA");
+
+
             });
         }
+        
     }
 }
 

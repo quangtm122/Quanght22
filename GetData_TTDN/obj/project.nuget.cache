@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DqlIhLhxD9XGHvfgrKU4f67BtbWD+6R4n7HaYCdztC/73I20hh9h4XZhoSo/mvqGOkbQ3oJCeXTLFMoG1usbmg==",
+  "dgSpecHash": "BtvXSYFpWbPw5giehZnp3PiUslyTqzzbVElYojfi+FatijLs73CrnVp+OCppd1YBhcMzJRkeGfrn0H360EwvYg==",
   "success": true,
   "projectFilePath": "D:\\1.TRẦN MINH QUANG\\4-1 THỰC TẬP DOANH NGHIỆP\\GetData_TTDN\\GetData_TTDN\\GetData_TTDN.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.binder\\6.0.0\\microsoft.extensions.configuration.binder.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\6.0.0\\microsoft.extensions.configuration.fileextensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.json\\6.0.0\\microsoft.extensions.configuration.json.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.newtonsoftjson\\5.0.1\\microsoft.extensions.configuration.newtonsoftjson.5.0.1.nupkg.sha512",

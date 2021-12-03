@@ -19,15 +19,16 @@ namespace GetData_TTDN
         {
         }
         public virtual DbSet<ThongTin> ThongTins { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            /*string connectDB = ConfigurationManager.AppSettings["connectDB"];*/
-
+ 
             if (!optionsBuilder.IsConfigured)
             {
                 object p = optionsBuilder.UseSqlServer("Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QLThongTin;Persist Security Info=True;User ID=sa;Password=123");
             }
         }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");

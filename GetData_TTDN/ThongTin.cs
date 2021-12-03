@@ -21,7 +21,7 @@ namespace GetData_TTDN
 
         public override string ToString()
         {
-            return "\n\t" + Name + ": " + HienTai + "; " + CongSuatLn + "; " + ThietKe + "; " + SanLuongNgay;
+            return "\t" + Name + ": " + HienTai + "; " + CongSuatLn + "; " + ThietKe + "; " + SanLuongNgay;
                                  
         }
     }
