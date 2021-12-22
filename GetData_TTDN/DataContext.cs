@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,14 +21,21 @@ namespace GetData_TTDN
         }
         public virtual DbSet<ThongTin> ThongTins { get; set; }
 
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
- 
+            var builder = new ConfigurationBuilder()
+                       .SetBasePath(Directory.GetCurrentDirectory())
+                       .AddJsonFile("Appsettings.json", optional: false);
+            IConfiguration config = builder.Build();
+            var connect = config.GetSection("connect").Get<MyService.connect>();
+
             if (!optionsBuilder.IsConfigured)
             {
-                object p = optionsBuilder.UseSqlServer("Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QLThongTin;Persist Security Info=True;User ID=sa;Password=123");
+                object p = optionsBuilder.UseSqlServer(connect.source);
             }
         }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

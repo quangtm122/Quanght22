@@ -14,21 +14,31 @@ namespace GetData_TTDN
 {
     internal class MyService
     {
+       
         private static readonly ILog log = LogManager.GetLogger(typeof(MyService));
         public MyService()
         {
-            log.Info("Start success \n");
+            log4net.Config.XmlConfigurator.ConfigureAndWatch(new FileInfo(AppDomain.CurrentDomain.BaseDirectory + "Log4net.config"));
         }
         public async Task Start()
         {
             await Scheduler();
+            log.Info("Start success \n");
         }
 
         public async Task Stop()
-        {         
-
+        {
+            log.Info("Stop success \n");
         }
-
+        public class connect
+        {
+            public string source { get; set; }
+        }
+        public class login
+        {
+            public string username { get; set; }
+            public string password { get; set; }
+        }
         public class timestart
         {
             public int hours_start { get; set; }
@@ -45,16 +55,21 @@ namespace GetData_TTDN
         {
             public int minutes_repeat { get; set; }
         }
+
+        public class settime
+        {
+            public string time { get; set; }
+        }
         private static async Task Scheduler()
         {
             var builder = new ConfigurationBuilder()
                   .SetBasePath(Directory.GetCurrentDirectory())
                   .AddJsonFile("Appsettings.json", optional: false);
-
             IConfiguration config = builder.Build();
             var timestart = config.GetSection("timestart").Get<timestart>();
             var timestop = config.GetSection("timestop").Get<timestop>();
             var timerepeat = config.GetSection("timerepeat").Get<timerepeat>();
+            var settime = config.GetSection("settime").Get<settime>();
 
             NameValueCollection props = new NameValueCollection
             {
@@ -73,14 +88,10 @@ namespace GetData_TTDN
 
 
             ITrigger trigger = TriggerBuilder.Create()
-             .WithDailyTimeIntervalSchedule
-                  (s =>
-                      s.WithIntervalInMinutes(timerepeat.minutes_repeat)
-                       .OnEveryDay()
-                      .StartingDailyAt(TimeOfDay.HourAndMinuteOfDay(timestart.hours_start, timestart.minutes_start)) // start at
-                      .EndingDailyAt(TimeOfDay.HourAndMinuteOfDay(timestop.hours_stop, timestop.minutes_stop)) // stop at
-                  )
-                .Build();
+             .WithIdentity("trigger", "group1")
+             .StartNow()
+             .WithCronSchedule(settime.time)
+             .Build();
 
             await sched.ScheduleJob(job, trigger);
         }

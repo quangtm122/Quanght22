@@ -12,10 +12,10 @@ namespace GetData_TTDN
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string HienTai { get; set; }
-        public string CongSuatLn { get; set; }
-        public string ThietKe { get; set; }
-        public string SanLuongNgay { get; set; }
+        public int HienTai { get; set; }
+        public int CongSuatLn { get; set; }
+        public int ThietKe { get; set; }
+        public int SanLuongNgay { get; set; }
 
         public DateTime Time { get; set; }
 
@@ -24,5 +24,6 @@ namespace GetData_TTDN
             return "\t" + Name + ": " + HienTai + "; " + CongSuatLn + "; " + ThietKe + "; " + SanLuongNgay;
                                  
         }
+
     }
 }
